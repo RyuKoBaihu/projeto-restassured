@@ -6,11 +6,10 @@ import io.restassured.response.ValidatableResponse;
 import org.junit.Assert;
 import org.junit.Test;
 
-import javax.management.StringValueExp;
-
 import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
 
-public class HelloWorldTest {
+public class MetodosDiferentesRestTest {
     Response response = request(Method.GET, "http://restapi.wcaquino.me/ola");
     Integer statusCodeOK = 200;
 
@@ -34,4 +33,18 @@ public class HelloWorldTest {
                 then().
                 statusCode(statusCodeOK);
     }
+
+    @Test
+    public void validacaoBodyHamscrest(){
+        given()
+                .when()
+                .response()
+                .then()
+                .statusCode(statusCodeOK)
+                .body(is("Ola Mundo!"))
+                .body(containsString("Mundo"))
+                .body(is(not(nullValue())));
+    }
+
+
 }
