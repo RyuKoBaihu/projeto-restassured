@@ -8,12 +8,17 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class HelloWorldTest {
+    Response response = RestAssured.request(Method.GET, "http://restapi.wcaquino.me/ola");
 
     @Test
     public void testHelloWorld() {
-        Response response = RestAssured.request(Method.GET, "http://restapi.wcaquino.me/ola");
         Assert.assertEquals("Ola Mundo!",response.getBody().asString());
         Assert.assertEquals(200,response.statusCode());
+    }
 
+    @Test
+    public void testeOutrosMetodos(){
+        Assert.assertEquals("Ola Mundo!",response.getBody().asString());
+        Assert.assertEquals(200,response.statusCode());
     }
 }
