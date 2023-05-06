@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fac4a366-66dd-41ef-8bcd-1b519e9e9587" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/br/ce/wcaquino/rest/HelloWorldTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/ce/wcaquino/rest/HelloWorldTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,12 +47,12 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean, install" />
-      <command value="mvn clean" />
-      <command value="mvn compile" />
       <command value="mvn install" />
+      <command value="mvn compile" />
+      <command value="mvn clean" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.HelloWorldTest">
+  <component name="RunManager" selected="JUnit.HelloWorldTest.metodoGivenWhenThen">
     <configuration name="HelloWorld" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.ce.wcaquino.rest.HelloWorld" />
       <module name="CursoRest" />
@@ -80,6 +81,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HelloWorldTest.metodoGivenWhenThen" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CursoRest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.ce.wcaquino.rest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.ce.wcaquino.rest" />
+      <option name="MAIN_CLASS_NAME" value="br.ce.wcaquino.rest.HelloWorldTest" />
+      <option name="METHOD_NAME" value="metodoGivenWhenThen" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HelloWorldTest.testHelloWorld" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CursoRest" />
       <extension name="coverage">
@@ -96,9 +113,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HelloWorldTest.testeOutrosMetodos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CursoRest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.ce.wcaquino.rest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.ce.wcaquino.rest" />
+      <option name="MAIN_CLASS_NAME" value="br.ce.wcaquino.rest.HelloWorldTest" />
+      <option name="METHOD_NAME" value="testeOutrosMetodos" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HelloWorldTest.metodoGivenWhenThen" />
         <item itemvalue="JUnit.HelloWorldTest" />
+        <item itemvalue="JUnit.HelloWorldTest.testeOutrosMetodos" />
         <item itemvalue="JUnit.HelloWorldTest.testHelloWorld" />
         <item itemvalue="Application.HelloWorld" />
       </list>
