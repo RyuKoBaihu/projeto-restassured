@@ -28,6 +28,10 @@ public class HelloWorldTest {
 
     @Test
     public void metodoGivenWhenThen(){
-        given().when().response().then().statusCode(statusCodeOK);
+        given()
+                .when()
+                .response().
+                then().
+                statusCode(statusCodeOK);
     }
 }
