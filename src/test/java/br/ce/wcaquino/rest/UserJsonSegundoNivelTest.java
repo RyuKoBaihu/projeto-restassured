@@ -3,37 +3,29 @@ package br.ce.wcaquino.rest;
 import io.restassured.http.Method;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.junit.Assert;
 import org.junit.Test;
 
-import static io.restassured.RestAssured.*;
+import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.request;
 import static org.hamcrest.Matchers.*;
 
-public class UserJsonPrimeiroNivelTest {
+public class UserJsonSegundoNivelTest {
 
-    Response response = request(Method.GET, "http://restapi.wcaquino.me/users/1");
+    Response response = request(Method.GET, "http://restapi.wcaquino.me/users/2");
     JsonPath jsonPath = new JsonPath(response.asString());
     Integer statusCodeOK = 200;
 
     @Test
-    public void testePrimeiroNivelJson() {
+    public void testeSegundoNivelJson() {
         given()
                 .when()
                 .response()
                 .then()
                 .statusCode(statusCodeOK)
-                .body("id",is(1))
-                .body("name",containsString("Silva"))
-                .body("age",greaterThan(18));
+                .body("name",containsString("Joaquina"))
+                .body("endereco.rua",is("Rua dos bobos"))
+                .body("endereco.numero",is(0));
     }
 
-    @Test
-    public void primeiroNivelOutroMetodo() {
-        //path
-        Assert.assertEquals(new Integer(1), response.path("id"));
-        Assert.assertEquals(new Integer(1), response.path("id"));
 
-        //jsonpath
-        Assert.assertEquals(1,jsonPath.getInt("id"));
-    }
 }
